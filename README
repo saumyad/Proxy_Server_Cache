@@ -1,0 +1,23 @@
+1) simple-thrift directory contains Part (i) of the project : Implement a simple RPC server and client using Apache Thrift. This should be a "Hello World" style program. The server return the current Unix time.
+
+2) RPCserver containts Part(ii) of the project : Turn your server into a basic proxy server. (Don't worry about the caching part yet.) Modify your server's RPC method to take a URL parameter and return the body of the document located at that URL.
+
+3) RPC-Cache-server : Implemented with caching modules
+
+4) RPCFinal : Contains the final code. It has some modifications to client and server request signatures, hence modified thrift files - hence a whole new directory. Otherwise adds the same caching mechanisms.
+
+All the client output goes to a file named out.txt(you will see webpage responses here). Server and network statistics can be seen in the server logs.
+
+To change the caching mechanism, go to the Makefile and change the PROXY/CACHE parameter to the appropriate file
+Cache size and capacity can be handled by constants in the gtcache header file.
+
+#####---------Go to RPCFinal ---> gen-cpp
+
+Run the server:
+./RPCservice_server
+
+Run the client
+./RPCservice_client <ip-address> testcases/t1
+
+Running the workloads:
+Under the testcases folder. All the logs and relevant plot data is inside log-data folder.
